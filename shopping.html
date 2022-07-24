@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shopping.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="shopping.js"></script>
+    <title>Shopping Project</title>
+</head>
+
+<body>
+    <!-------------------- Header section ------------------------>
+
+    <div id="header">
+        <div class="container1">
+            <nav>
+                <div class="logo"><a href="#"><b>ShoPperZ</b></a></div>
+                <ul>
+                    <li> <input type="search" placeholder="search products" id="search">
+                        <button onclick="searchItem()"> search</button>
+                        <ion-icon class="s" name="search"></ion-icon>
+                    </li>
+                    <li><a href="#" class="under">HOME</a></li>
+                    <li><a href="#" class="under">SHOP</a></li>
+                    <li><a href="#" class="under">OUR PRODUCTS</a></li>
+                    <li><a href="#" class="under">CONTACT US</a></li>
+                    <li><a href="#" class="under">ABOUT US</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+    <!---------------------------- Main section-------------------- -->
+    <div id="mainsection">
+        <div class="img-slider">
+            <img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\background.jpg">
+            <img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\shopping.jpg">
+            <img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\homedecor.jpg">
+            <img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\shop.jpg">
+            <img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\offer.jpg">
+
+
+
+        </div>
+
+
+
+        <div class="container-2">
+            <div class="product-section">
+
+                <div class="items">
+                    <div class="img" id="img1">
+                        <img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\shoes.jpg">
+                    </div>
+                    <div class="name" id="n1">SHOES</div>
+                    <div class="price" id="p1">$5</div>
+                    <div class="details">The new lightweight, fully-cushioned training and racing shoe </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n1').innerText,document.querySelector('#p1').innerText)">Add
+                        to cart</button>
+                </div>
+
+
+                <div class="items">
+                    <div class="img" id="img2"><img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\watch.png">
+                    </div>
+                    <div class="name" id="n2">WATCH</div>
+                    <div class="price" id="p2">$15</div>
+                    <div class="details">Watch With Mechanical Manufacture Movement, Automatic Winding, Stainless Steel Case And Bracele </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n2').innerText,document.querySelector('#p2').innerText)">Add
+                        to cart</button>
+                </div>
+
+
+                <div class="items">
+                    <div class="img" id="img3"><img
+                            src="C:\Users\Labrador\Documents\GitHub\shoppingproject\smartphone.png"></div>
+                    <div class="name" id="n3">SMART PHONE</div>
+                    <div class="price" id="p3">$25</div>
+                    <div class="details">6.5-inch IPS display with an HD+ resolution. It is based on a Unisoc Tier T612 chipset with 3GB or 4GB of RAM </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n3').innerText,document.querySelector('#p3').innerText)">Add
+                        to cart</button>
+                </div>
+
+
+
+                <div class="items">
+                    <div class="img" id="img4"><img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\jeans.png">
+                    </div>
+                    <div class="name" id="n4">JEANS</div>
+                    <div class="price" id="p4">$25</div>
+                    <div class="details">BETTY DENIM 28'' SLIM ANKLE PANT WITH TEAR AND INSERT </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n4').innerText,document.querySelector('#p4').innerText)">Add
+                        to cart</button>
+                </div>
+
+
+                <div class="items">
+                    <div class="img" id="img5"><img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\cups.jpg">
+                    </div>
+                    <div class="name" id="n5">CUPS</div>
+                    <div class="price" id="p5">$15</div>
+                    <div class="details">Majestic Mug - 17 oz. - Solid </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n5').innerText,document.querySelector('#p5').innerText)">Add
+                        to cart</button>
+                </div>
+
+                <div class="items">
+                    <div class="img" id="img5"><img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\coffemaker.jpg">
+                    </div>
+                    <div class="name" id="n5">COFFEE MAKER</div>
+                    <div class="price" id="p5">$55</div>
+                    <div class="details">streamlined, modern coffee maker gives you a range of Keurig features that can enhance your coffee routine </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n5').innerText,document.querySelector('#p5').innerText)">Add
+                        to cart</button>
+                </div>
+
+                <div class="items">
+                    <div class="img" id="img5"><img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\microwave.png">
+                    </div>
+                    <div class="name" id="n5">MICROWAVE</div>
+                    <div class="price" id="p5">$15</div>
+                    <div class="details">Microwave Oven Rack,Carbon Steel Holder,Expandable Shelf,with 3 Hooks and Anti-Slippery Mat </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n5').innerText,document.querySelector('#p5').innerText)">Add
+                        to cart</button>
+                </div>
+
+<div class="items">
+                    <div class="img" id="img5"><img src="C:\Users\Labrador\Documents\GitHub\shoppingproject\blanklets.jpeg">
+                    </div>
+                    <div class="name" id="n5">BLANKETS</div>
+                    <div class="price" id="p5">$15</div>
+                    <div class="details">Bedsure Sherpa Fleece Throw Blankets Grey - Fluffy Blanket Plush Throws Fuzzy Soft Blanket for Bed Couch Sofa </div>
+                    <button class="button"
+                        onclick="addtocart(document.querySelector('#n5').innerText,document.querySelector('#p5').innerText)">Add
+                        to cart</button>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <h1> Cart</h1>
+    <div class="cart"></div>
+    
+
+    <!---------------------------- Footer section------------------------------------->
+    <footer>
+        <div class="footer0">
+            <h1>ShoPperZ</h1>
+        </div>
+        <div class="footer1 ">
+            Connect with us at<div class="social-media">
+                <a href="facebook.com/shopperz">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </div>
+        </div>
+        <div class="footer2">
+            <div class="product">
+                <div class="heading">Products</div>
+                <div class="div">Sell your Products</div>
+                <div class="div">Advertise</div>
+                <div class="div">Pricing</div>
+                <div class="div">Product Buisness</div>
+            </div>
+            <div class="services">
+                <div class="heading">Services</div>
+                <div class="div">Return</div>
+                <div class="div">Cash Back</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Others</div>
+            </div>
+            <div class="Company">
+                <div class="heading">Company</div>
+                <div class="div">Complaint</div>
+                <div class="div">Careers</div>
+                <div class="div">Affiliate Marketing</div>
+                <div class="div">Support</div>
+            </div>
+            <div class="Get Help">
+                <div class="heading">Get Help</div>
+                <div class="div">Help Center</div>
+                <div class="div">Privacy Policy</div>
+                <div class="div">Terms</div>
+                <div class="div">Login</div>
+            </div>
+        </div>
+        <div class="footer3">Copyright © <h4>ShoPperZ</h4> 2021-2028</div>
+    </footer>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+
+</html>
