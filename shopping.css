@@ -1,0 +1,321 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container1 {
+    padding: 10px 10%;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+
+}
+
+.logo a {
+
+    color: white;
+    text-decoration: none;
+    font-size: 40px;
+    position: relative;
+}
+
+.logo a:hover {
+    color: rgb(240, 197, 6);
+    transition-duration: 1s;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: yellow;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+
+.container-2 .product-section {
+
+    display: flex;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 200px 0;
+
+}
+
+.container-2 .product-section .items {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    border: 3px solid black;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.container-2 .product-section .items .img img {
+
+    width: 100%;
+    height: 250px;
+    position: relative;
+    border-radius: 10px;
+
+
+}
+
+.container-2 .product-section .items:hover .img img {
+    transform: scale(1.2);
+    transition-duration: 0.8s;
+    border-radius: 12px;
+}
+
+
+.container-2 .product-section .items .img img{
+    overflow: hidden;
+    margin: 0;
+  }
+
+
+.container-2 .product-section .items .name {
+    justify-content: center;
+    text-align: center;
+    background-color: yellowgreen;
+    width: 100%;
+    font-style: oblique;
+    color: azure;
+    text-decoration: solid;
+    height: max-content;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.container-2 .product-section .items .price {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    color: red;
+    text-decoration: solid;
+    height: max-content;
+    position: relative;
+
+
+}
+
+.container-2 .product-section .items .details {
+    justify-content: center;
+    text-align: center;
+    color: brown;
+    width: 100%;
+    position: relative;
+
+
+}
+
+.container-2 .product-section .items .button {
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin-left: 80px;
+    position: relative;
+}
+
+.bottom-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: azure;
+    justify-content: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 200px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    color: white;
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 15px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.social-media a {
+    color: white;
+    margin: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+}
+
+.social-media a ion-icon {
+    color: white;
+    background-color: black;
+}
+
+.social-media a:hover ion-icon {
+    color: red;
+    transform: translateY(5px);
+}
+
+.footer2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+.footer0 {
+    font-weight: 1200;
+    transition-duration: 1s;
+}
+
+.footer0:hover {
+    color: rgb(243, 168, 7);
+}
+
+.footer2 .heading {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.footer3 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer2 .heading:hover {
+    color: rgb(243, 168, 7);
+}
+
+.footer2 .div:hover {
+    transform: scale(1.05);
+}
+
+.footer3 h4 {
+    margin: 0 10px;
+}
+
+.footer2 div {
+    margin: 10px;
+}
+
+.menu {
+    visibility: hidden;
+}
+
+.heading1 .ham:active {
+    color: red;
+}
+
+.items {
+    overflow: hidden;
+}
+
+.ham,
+.close {
+    cursor: pointer;
+}
+
+
+.img-slider {
+    display: flex;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation-name: slide1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transition-duration: 5s;
+  }
+
+  .img-slider img{  
+       height:720px;  
+       width:1200px;  
+  }  
+  @keyframes slide1 {
+    0% {
+      left: 0vw;
+    }
+    15% {
+      left: 0vw;
+    }
+    20% {
+      left: -80vw;
+    }
+    32% {
+      left: -80vw;
+    }
+    35% {
+      left: -160vw;
+    }
+    47% {
+      left: -160vw;
+    }
+    50% {
+      left: -240vw;
+    }
+    63% {
+      left: -240vw;
+    }
+    66% {
+      left: -320vw;
+    }
+    79% {
+      left: -320vw;
+    }
+    82% {
+      left: -400vw;
+    }
+    100% {
+      left: 0vw;
+    }
+  }

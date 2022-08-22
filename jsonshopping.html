@@ -1,0 +1,103 @@
+<!-- https://dummyjson.com/docs/products -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style2.css"> 
+</head>
+<body>
+	<h1>Welcome to Online Shopping</h1>
+	<div class="search">  
+		<input type="search" placeholder="search products" id="search">
+		<button onclick="searchItem()"> search</button>  
+			<!-- <ion-icon class="s" name="search"></ion-icon>   -->
+		
+	</div> 
+	<div id="data"></div>
+	<h1> Cart</h1>
+	 <div class="cart"></div>
+	
+	<script>
+		const allProducts = [];
+							fetch('https://dummyjson.com/products')
+							.then((res) =>{ 
+								// console.log("hi",res.json())
+							
+								return res.json() }) 
+							.then ((data) => {
+							let temp ="";
+							 for(let i=0;i<data.products.length;i++){
+								temp+= `<div class="item">`
+								temp+=`<div class="img">
+									<img  src=${data.products[i].thumbnail} alt="" height=200 width=150>
+									</div>`; 
+							 }
+							data.products.map((ele,i)=> {
+								temp+= `<div class="item">`
+								temp+=`<div class="img">
+									<img  src=${ele.thumbnail} alt="" height=200 width=150>
+									</div>`; 
+								 temp+=`<div class="name" id="n${i}">${ele.title}</div>`;  
+             		temp += `<div class="price" id="p${i}">${ele.price}</div>`;  
+             		temp+=`<div class="info">$${ele.description}</div>`; 
+						 		temp+=`<button class="button" onclick="addtocart(document.querySelector('#n${i}').innerText,document.querySelector('#p${i}').innerText)">Add to cart</button> `
+								temp+= `</div>`;
+								// allProducts.push(ele);
+							})
+								document.getElementById("data").innerHTML=temp;
+     	})
+		 .catch((err) => console.log("error",err))
+
+		 let products = [];
+		function addtocart(name,price){
+			let item = {};
+			item.name=name;
+			item.price=price;
+			products.push(item);
+			dispCart(products);
+		}
+		console.log("cart", products);
+		function dispCart(products){
+			const cart = document.querySelector('.cart');
+			const div = document.createElement("div");
+			products.map((ele)=> {	
+				
+			const html = `
+			<div class="cart-item">
+			<span class="title">${ele.name}</span>
+			<span class="price">${ele.price}</span>
+			<button class="button" onclick="removeItem()">Remove item</button>
+			</div>`;
+			div.innerHTML=html;
+			document.querySelector(".cart").appendChild(div);
+			
+			})
+		}
+		function removeItem() {
+			const item = document.querySelector('.cart-item');
+    	item.remove();
+	}
+	// function searchItem(){
+	// 	const search = document.getElementById("search").value.toLowerCase();
+		
+	// 	allProducts.forEach((item)=> 
+	// 	{ 
+	// 		const name = item.title.toLowerCase();
+	// 		// console.log("item",name)
+	// 		// if(name==""){
+	// 		// 		dispCart(allProducts)
+	// 		// }
+	// 		// else if(name.includes(search))
+	// 		// console.log(name);
+	// 	})
+	// 	// console.log("filter",filtered);
+	// }
+		 </script>
+
+</div>
+</div>
+</body>
+</html>
